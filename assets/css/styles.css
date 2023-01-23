@@ -1,0 +1,205 @@
+    /* font-family: 'Lato', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Playfair Display', serif; */
+element {
+    --font-lato: 'Lato', sans-serif;
+    --font-oswald: 'Oswald', sans-serif;
+    --font-pfDisplay: 'Playfair Display', serif;
+}
+
+/* site wide */
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+* {
+    background-color: whitesmoke;
+}
+
+/* Body and window stuff */
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#icons {
+    color: lightgray;
+    display: inline;
+
+}
+#icons > * {
+    margin: 2px;
+}
+
+/* Navigation / top bar */
+nav {
+    width: 100%;
+    padding: 0 7%;
+    border: 2px solid blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+nav > ul {
+    color: gray;
+    font-weight: bold;
+}
+nav > ul > * {
+    padding: 10px;
+}
+
+/* nav > #icons {
+    margin-right: 20%;
+} */
+
+/* main-page */
+#main-page {
+    border: 3px solid green;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "main aside";
+    grid-template-columns: 2fr 1fr;
+}
+
+
+/* main content (blog posts) */
+main {
+    grid-area: "main";
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 3%;
+}
+
+.main-post {
+    border: 2px solid red;
+    width: 85%;
+
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.main-post > img {
+    width: 100%;
+}
+
+.main-post > button {
+    background-color: whitesmoke;
+    color: orange;
+    border: 2px solid orange;
+    border-radius: 2px;
+}
+.main-post > button:hover {
+    background-color: orange;
+    color: whitesmoke;
+    border-color: whitesmoke;
+}
+
+
+
+.post-footer {
+    margin: 0 auto;
+    margin-top: 25px;
+    border-top: 1px solid lightgray;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#pages {
+    position: relative;
+    left: 10px;
+}
+
+#pages > * {
+    border: 2px solid red;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 100%;
+}
+
+
+ul {
+    list-style: none;
+}
+
+ul > * {
+    display: inline-block;
+    padding: 2px;
+}
+
+aside {
+    grid-area: "aside";
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+aside > * {
+    margin-bottom: 100px;
+}
+
+#profile {
+    border: 2px solid red;
+    width: 78%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+#profile > h3 {
+    font-family: var(--font-pfDiaply);
+}
+
+
+#profile > .background {
+    position: absolute;
+    width: 100%;
+    margin-bottom: 20%;
+    z-index: 0;
+}
+
+#profile > .photo {
+    border: 6px solid white;
+    border-radius: 50%;
+    width: 55%;
+
+    margin-top: 30%;
+    z-index: 10;
+}
+
+#profile > h3 {
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    width: 100%;
+}
+
+#profile > p {
+    text-align: center;
+    padding: 0 5%;
+    font-size: 1.25rem;
+    width: 100%;
+}
+
+#profile > #icons > * {
+    border: 1px solid gray;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+#popular {
+    border: 2px solid red;
+}
