@@ -83,6 +83,10 @@ nav > #icons {
     align-items: center;
 }
 
+#mobile-nav {
+    display: none;
+}
+
 /* nav > #icons {
     margin-right: 20%;
 } */
@@ -521,6 +525,24 @@ footer > h3 {
 
     aside {
         align-items: center;
+    }
+
+    nav {
+        display: none;
+    }
+    #mobile-nav {
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background-color: hsl(0, 0%, 92%);
+        border-bottom: 1px solid hsl(0, 0%, 80%);
+
+    }
+    #mobile-nav > i {
+        font-size: 2rem;
     }
 
 }
